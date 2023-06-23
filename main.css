@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.wrapper{
+  height: 100vh;
+  overflow-x: hidden;
+  /* overflow-y: auto; */
+}
+
+.showEffect:hover svg {
+  filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.5));
+}
+.showEffect1:hover svg {
+  filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.08));
+}
+.cont-box-shadow{
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.bg-section{
+  background-size: 100% 100%;
+}
+.moveUp{
+  animation: image_move_up 15s linear infinite;
+}
+@keyframes image_move_up {
+  0% {
+    transform: translateY(0);
+  }
+  
+  100% {
+    transform: translateY(-30%);
+  }
+  
+}
+
+
+html{
+  font-size: 100%;
+}
+
+/* 15.5px */
+@media (min-width: 1024px) {
+  html {
+    font-size: 96.875%;
+    /* font-size: 100%; */
+
+  }
+}
+
+/* 14.5px */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    html {  
+    font-size: 90.625%;
+  }
+
+}
+/* 13.5 */
+@media (min-width: 640px) and (max-width: 768px) {
+  html {
+    font-size: 84.375%;
+  }
+}
+@media (max-width:640px) {
+  html {
+    font-size: 78.125%;
+
+  }
+  @media (max-width: 480px) {
+    .showEffect1 svg {
+      filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.08));
+    }
+    .showEffect svg {
+      filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.5));
+}
+  }
+  @media (max-width: 410px) {
+    .ft1{
+      gap: 1rem;
+    }
+    .bb{
+      height: 1rem;
+    }
+  }
+}
